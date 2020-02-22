@@ -6,7 +6,7 @@
             "request": "launch",
             "servertype": "openocd",
             "cwd": "${workspaceRoot}",
-            "executable": "./target/thumbv7m-none-eabi/debug/stm32-01-blink",
+            "executable": "./target/thumbv7m-none-eabi/debug/${workspaceFolderBasename}",
             "name": "Debug (OpenOCD)",
             "device": "STM32F103VCT6",
             "configFiles": [
