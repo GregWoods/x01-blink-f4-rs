@@ -18,6 +18,7 @@ use stm32f1xx_hal::{
     pac,
     timer::Timer,
 };
+use cortex_m_semihosting::hprintln;
 use cortex_m_rt::entry;
 use embedded_hal::digital::v2::OutputPin;
 
@@ -45,6 +46,8 @@ fn main() -> ! {
     let mut led = gpioc.pc13.into_push_pull_output(&mut gpioc.crh);
     // Configure the syst timer to trigger an update every second
     let mut timer = Timer::syst(cp.SYST, &clocks).start_count_down(1.hz());
+    
+    hprintln!("Hello from Greg").unwrap();
 
     // Wait for the timer to trigger an update and change the state of the LED
     loop {
