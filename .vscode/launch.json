@@ -15,7 +15,8 @@
                 "target/stm32f1x.cfg"
             ],
             "runToMain": true,
-            "svdFile": "${workspaceRoot}/.vscode/STM32F103.svd"
+            "svdFile": "${workspaceRoot}/.vscode/STM32F103.svd",
+            "postLaunchCommands": [ "monitor arm semihosting enable" ]
         }
     ]
 }
