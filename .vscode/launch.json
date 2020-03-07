@@ -8,13 +8,14 @@
             "request": "launch",
             "servertype": "openocd",
             "cwd": "${workspaceRoot}",
-            //"preLaunchTask": "cargo build",
+            "preLaunchTask": "Rust: cargo build",
             "executable": "./target/thumbv7m-none-eabi/debug/${workspaceFolderBasename}",
             "configFiles": [
                 "interface/stlink.cfg",
                 "target/stm32f1x.cfg"
             ],
-            "runToMain": true
+            "runToMain": true,
+            "svdFile": "${workspaceRoot}/.vscode/STM32F103.svd"
         }
     ]
 }
