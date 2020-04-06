@@ -8,15 +8,25 @@
             "request": "launch",
             "servertype": "openocd",
             "cwd": "${workspaceRoot}",
-            "preLaunchTask": "Rust: cargo build",
             "executable": "./target/thumbv7m-none-eabi/debug/${workspaceFolderBasename}",
+            
+            
             "configFiles": [
                 "interface/stlink.cfg",
                 "target/stm32f1x.cfg"
             ],
             "runToMain": true,
-            "svdFile": "${workspaceRoot}/.vscode/STM32F103.svd",
-            "postLaunchCommands": [ "monitor arm semihosting enable" ]
+            "svdFile": "${workspaceRoot}/.vscode/STM32F103.svd"
+            /*--??used for itm debugging, but not possible with unmodified st-link
+            "swoConfig": {
+                "enabled": true,
+                "cpuFrequency": 8000000,
+                "swoFrequency": 2000000,
+                "source": "probe",
+                "decoders": [
+                    { "type": "console", "label": "ITM", "port": 0 }
+                ]
+            }*/            
         }
     ]
 }
