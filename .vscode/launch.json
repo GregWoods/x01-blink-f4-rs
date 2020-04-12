@@ -8,7 +8,7 @@
             "request": "launch",
             "servertype": "openocd",
             "cwd": "${workspaceRoot}",
-            "executable": "./target/thumbv7m-none-eabi/debug/${workspaceFolderBasename}",
+            "executable": "./target/thumbv7em-none-eabihf/debug/${workspaceFolderBasename}",
             
             
             "configFiles": [
