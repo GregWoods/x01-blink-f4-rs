@@ -3,7 +3,7 @@
     "configurations": [
         {
             "name": "Debug (OpenOCD)",
-            "device": "STM32F103VCT6",
+            "device": "STM32F411CEU6",
             "type": "cortex-debug",
             "request": "launch",
             "servertype": "openocd",
@@ -13,10 +13,10 @@
             
             "configFiles": [
                 "interface/stlink.cfg",
-                "target/stm32f1x.cfg"
+                "target/stm32f4x.cfg"
             ],
             "runToMain": true,
-            "svdFile": "${workspaceRoot}/.vscode/STM32F103.svd"
+            "svdFile": "${workspaceRoot}/.vscode/STM32F411.svd"
             /*--??used for itm debugging, but not possible with unmodified st-link
             "swoConfig": {
                 "enabled": true,

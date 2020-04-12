@@ -1,5 +1,5 @@
 [package]
-name = "stm32f1-01-blink"
+name = "stm32f4-01-blink"
 version = "0.1.0"
 authors = ["Greg Woods <gregwoodslancs@gmail.com>"]
 edition = "2018"
@@ -15,6 +15,6 @@ cortex-m-semihosting = "*"
 # Panic behaviour, see https://crates.io/keywords/panic-impl for alternatives
 panic-halt = "*"
 
-[dependencies.stm32f1xx-hal]
+[dependencies.stm32f4xx-hal]
 version = "*"
-features = ["rt", "stm32f103", "medium"]
+features = ["rt", "stm32f411"]

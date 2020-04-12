@@ -128,6 +128,11 @@ version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
+name = "rand_core"
+version = "0.5.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
 name = "rustc_version"
 version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -154,8 +159,8 @@ version = "1.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
-name = "stm32f1"
-version = "0.9.0"
+name = "stm32f4"
+version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "bare-metal 0.2.5 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -165,7 +170,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "stm32f1-01-blink"
+name = "stm32f4-01-blink"
 version = "0.1.0"
 dependencies = [
  "cortex-m 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -174,21 +179,22 @@ dependencies = [
  "embedded-hal 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "nb 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "panic-halt 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
- "stm32f1xx-hal 0.5.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "stm32f4xx-hal 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
-name = "stm32f1xx-hal"
-version = "0.5.3"
+name = "stm32f4xx-hal"
+version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "as-slice 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "bare-metal 0.2.5 (registry+https://github.com/rust-lang/crates.io-index)",
  "cast 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "cortex-m 0.6.2 (registry+https://github.com/rust-lang/crates.io-index)",
  "cortex-m-rt 0.6.12 (registry+https://github.com/rust-lang/crates.io-index)",
  "embedded-hal 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)",
  "nb 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "stm32f1 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rand_core 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "stm32f4 0.10.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "void 1.0.2 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -247,12 +253,13 @@ dependencies = [
 "checksum proc-macro2 1.0.10 (registry+https://github.com/rust-lang/crates.io-index)" = "df246d292ff63439fea9bc8c0a270bed0e390d5ebd4db4ba15aba81111b5abe3"
 "checksum quote 1.0.3 (registry+https://github.com/rust-lang/crates.io-index)" = "2bdc6c187c65bca4260c9011c9e3132efe4909da44726bad24cf7572ae338d7f"
 "checksum r0 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)" = "e2a38df5b15c8d5c7e8654189744d8e396bddc18ad48041a500ce52d6948941f"
+"checksum rand_core 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)" = "90bde5296fc891b0cef12a6d03ddccc162ce7b2aff54160af9338f8d40df6d19"
 "checksum rustc_version 0.2.3 (registry+https://github.com/rust-lang/crates.io-index)" = "138e3e0acb6c9fb258b19b67cb8abd63c00679d2851805ea151465464fe9030a"
 "checksum semver 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)" = "1d7eb9ef2c18661902cc47e535f9bc51b78acd254da71d375c2f6720d9a40403"
 "checksum semver-parser 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)" = "388a1df253eca08550bef6c72392cfe7c30914bf41df5269b68cbd6ff8f570a3"
 "checksum stable_deref_trait 1.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "dba1a27d3efae4351c8051072d619e3ade2820635c3958d826bfea39d59b54c8"
-"checksum stm32f1 0.9.0 (registry+https://github.com/rust-lang/crates.io-index)" = "22ce629123831891663402861bdc7140ebfd6a34a464329f9b9ec1cfde72055a"
-"checksum stm32f1xx-hal 0.5.3 (registry+https://github.com/rust-lang/crates.io-index)" = "455bf444813cdc2498130626c5d0ca42f91de1e8261751f3bdc6e5ad9e2aa128"
+"checksum stm32f4 0.10.0 (registry+https://github.com/rust-lang/crates.io-index)" = "44a3d6c58b14e63926273694e7dd644894513c5e35ce6928c4657ddb62cae976"
+"checksum stm32f4xx-hal 0.7.0 (registry+https://github.com/rust-lang/crates.io-index)" = "54abcca9b4abfb0d0518591ea39c2e14a0b07b9791548d4516ab5e61a83067cc"
 "checksum syn 1.0.17 (registry+https://github.com/rust-lang/crates.io-index)" = "0df0eb663f387145cab623dea85b09c2c5b4b0aef44e945d928e682fce71bb03"
 "checksum typenum 1.11.2 (registry+https://github.com/rust-lang/crates.io-index)" = "6d2783fe2d6b8c1101136184eb41be8b1ad379e4657050b8aaff0c79ee7575f9"
 "checksum unicode-xid 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)" = "826e7639553986605ec5979c7dd957c7895e93eabed50ab2ffa7f6128a75097c"

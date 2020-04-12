@@ -1,8 +1,8 @@
-[target.thumbv7m-none-eabi]
-runner = "arm-none-eabi-gdb -x gdbinit.cfg"
+[target.thumbv7em-none-eabihf]
+runner = "arm-none-eabihf-gdb -x gdbinit.cfg"
 rustflags = [
   "-C", "link-arg=-Tlink.x",
 ]
 
 [build]
-target = "thumbv7m-none-eabi"
+target = "thumbv7em-none-eabihf"
