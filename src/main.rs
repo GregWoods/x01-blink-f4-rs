@@ -40,8 +40,7 @@ fn main() -> ! {
     // Acquire the GPIOC peripheral
     let gpioc = dp.GPIOC.split();
 
-    // Configure gpio C pin 13 as a push-pull output. The `crh` register is passed to the function
-    // in order to configure the port. For pins 0-7, crl should be passed instead.
+    // Configure gpio C pin 13 as a push-pull output
     let mut led = gpioc.pc13.into_push_pull_output();
     // Configure the syst timer to trigger an update every second
     let mut timer = Timer::syst(cp.SYST, 1.hz(), clocks);
